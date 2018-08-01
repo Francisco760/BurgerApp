@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Eat da Burger!</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="/assets/css/reset.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+
+<body>
+  <div class="container">
+
+    <br>
+
+    <div class="row">
+      <div class="col-md-6"></div>
+      <div class="col-md-6">
+        <center>
+          <h1 class="pageTitle">Eat da Burger!
+          </h1>
+        </center>
+      </div>
+    </div>
+
+    <br> {{{body}}}
+
+    <br>
+    <br>
+
+    <!-- Input New Burgers Form -->
+    <form action="burger/create" method="POST">
+
+      <!-- Text Area Input -->
+      <div class="row">
+
+        <!-- Div to help align to right -->
+        <div class="col-md-6"></div>
+
+        <!-- Burger Input Box -->
+        <div class="form-group col-md-6">
+          <center>
+            <label for="new_burger" class="subTitle" align="right" style="font-size:20px">Request a new burger and place your order!</label>
+          </center>
+          <textarea class="form-control" columns="8" rows="4" id="new_burger" name="burgerName"></textarea>
+          <br>
+        </div>
+
+        <div class="row">
+          <!-- Div to help align to right -->
+          <div class="col-md-6"></div>
+          <div class="col-md-6">
+            <center>
+              <button id="submit-button" type="submit" class="btn-large red darken-3 waves-effect waves-light">Place Order
+              </button>
+            </center>
+          </div>
+    </form>
+    <br>
+    </div>
+
+    <!-- Link for thumb button -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+    <script>
+      function myFunction(x) {
+        x.classList.toggle("fa-thumbs-down");
+      }
+    </script>
+</body>
+
+</html>

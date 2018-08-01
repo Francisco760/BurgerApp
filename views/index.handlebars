@@ -1,0 +1,47 @@
+<div class="row">
+  <center>
+
+    <!-- Div to help align to right -->
+    <div class="col-md-6"></div>
+    <div class="col-md-6">
+      <h4 class="subTitle">Ready to eat!</h4>
+      <div id="ready_to_eat">
+
+        {{#each burgers}} {{#unless devoured}}
+        <form action="burger/eat/{{id}}" method="POST">
+          <div class="input-group">
+            <li class="form-control">{{id}}. {{burgerName}}</li>
+            <span class="input-group-btn">
+              <button class="btn btn-success devour-button red darken-3 waves-effect waves-light" type="submit">Devour It!</button>
+            </span>
+          </div>
+        </form>
+        {{/unless}} {{/each}}
+        <br>
+      </div>
+    </div>
+    <br>
+    <div class="container">
+
+      <!-- Div to help align to right -->
+      <div class="col-md-6"></div>
+      <div class="col-md-6">
+        <h4 class="subTitle">Devoured!</h4>
+        <div id="already_eaten">
+
+          {{#each burgers}} {{#if this.devoured}}
+          <div class="input-group">
+            <li class="form-control">{{this.id}}. {{this.burgerName}}</li>
+            <span class="input-group-btn">
+              <button>
+                <i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
+              </button>
+            </span>
+          </div>
+          {{/if}} {{/each}}
+
+        </div>
+      </div>
+    </div>
+  </center>
+</div>

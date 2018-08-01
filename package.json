@@ -1,0 +1,9 @@
+{
+  "name": "burger",
+  "version": "1.0.0",
+  "description": "Eat Da Burger! allows users to select an item from the menu, post item from menu and add item to menu",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
